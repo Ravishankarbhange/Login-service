@@ -22,7 +22,7 @@ public class LoginController {
     public UserMaster signup(@RequestBody UserMaster user) {
 		return userrepo.save(user);
     }
-	
+	//----
 	@PostMapping("/login")
 	public UserMaster login(@RequestBody UserMaster user) {
 		UserMaster u=userrepo.findByEmailId(user.getEmailId());
